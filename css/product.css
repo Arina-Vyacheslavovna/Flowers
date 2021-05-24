@@ -1,0 +1,153 @@
+#main_product {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    background: radial-gradient(rgb(255, 255, 255),rgba(219, 177, 255, 0.185));
+}
+
+.description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    background: radial-gradient(rgb(255, 255, 255),rgba(255, 255, 255, 0.123));
+}
+
+.description img {
+    width: 500px;
+    height: 500px;
+    margin: 20px;
+}
+
+.product_description {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 10px 30px;
+}
+
+.product_description p {
+    margin: 10px;
+}
+
+.wish_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+  }
+  
+.wish_list a:first-child button {
+    padding: 10px;
+    background-color: rgb(0, 163, 0);
+    margin: 10px;
+    border: 0;
+    border-radius: 15px;
+    text-transform: uppercase;
+    box-shadow: 0 1px 1px rgb(187, 187, 187) inset;
+  }
+  
+.wish_list a:first-child button:hover {
+    background-color:rgb(0, 218, 0);
+    transition: 0.3s;
+  }
+  
+.wish_list a:last-child button {
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    border: 0;
+    background: radial-gradient(rgb(255, 255, 255),rgba(255, 255, 255, 0.123));
+    background-image: url(../images/like-heart-outline-symbol_icon-icons.com_73226.png);
+    background-size: cover;
+  }
+  
+.wish_list a:last-child button:hover {
+    background-image: url(../images/heart-icon.png);
+    transition: 0.3s;
+  }
+  
+h2 {
+    font-size: 28px;
+    margin: 10px;
+    text-align: center;
+}
+
+h2 + p {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: justify;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+}
+
+.owl-carousel {
+  width: 90%;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: rgba(219, 177, 255, 0.377);
+}
+
+.owl-carousel .product {
+  width: 200px;
+  margin: auto;
+}
+
+.owl-carousel .product img {
+  width: 200px;
+  height: 200px;
+}
+
+@media (max-width: 1199px) {
+    .description img {
+      width: 350px;
+      height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+  .description {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .description img {
+    width: 400px;
+    height: 400px;
+  }
+  .product_description {
+    margin: 10px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  #main_product {
+    width: 80%;
+  }
+  .owl-carousel {
+    width: 80%;
+  }
+  .description img {
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+  }
+  .description p {
+    text-align: center;
+  }
+  .wish_list {
+    flex-direction: column;
+    justify-content: center;
+  }
+  h2 + p {
+      font-size: 16px;
+      line-height: 20px;
+      text-align: justify;
+  }
+
+}

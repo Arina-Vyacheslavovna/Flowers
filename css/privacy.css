@@ -1,0 +1,33 @@
+#info_products {
+    margin-bottom: 40px
+}
+.content_text h2 {    
+    font-size: 26px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin: 20px auto;
+} 
+.content_text p, .content_text ul li{
+    line-height: 30px; 
+    font-size: 22px;
+    text-align: justify;
+}
+.content_text ul {
+    list-style-type: disc;
+    text-align: justify;
+}
+.content_text ul li {
+    margin-left: 20px;
+}
+
+@media (max-width:468px) {
+    .content_text h1 {
+        font-size: 26px;
+    }
+    .content_text h2 {
+        font-size: 22px;
+    }
+    .content_text p, .content_text ul li{
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,519 @@
+html,
+body {
+  background-color: white;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: normal;
+  font-size: 18px;
+  
+  background: linear-gradient(to top left, rgb(219, 177, 255), white) ;
+  background-attachment: fixed;
+  color: rgb(75, 75, 75);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(65, 65, 65);
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  padding-bottom: 20px;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  /* position: fixed; */
+}
+
+.header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height: 100%; */
+  background: rgb(235, 213, 255);
+  z-index: 2;
+}
+
+.header_body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 97%;
+}
+
+.header_contacts {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  z-index: 3;
+  width: 100%;
+}
+
+.header_contacts a:first-child img {
+  height: 100px;
+}
+
+.header_telephone {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.header_telephone + a img,
+.header_contacts a:nth-child(5) img {
+  width: 25px;
+  height: 25px;
+}
+
+.header_telephone + a,
+.header_contacts a:nth-child(5) {
+  padding: 7px;
+  border: 2px double black;
+  border-radius: 50%;
+}
+
+.header_menu {
+  width: 100%;
+  margin: auto;
+}
+
+.header_menu ul {
+  border-top: 1px solid gray;
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+
+.header_list,
+.header_list_nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.header_list li,
+.header_list_nav li {
+  padding: 10px;
+}
+
+.header_list li:last-child a {
+  color: rgb(25, 0, 255);
+}
+
+.header_list li:hover,
+.header_list_nav li:hover {
+  background-color: rgb(197, 208, 255);
+}
+
+.header_burger {
+  display: none;
+}
+
+.header_contacts form {
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 3px 3px rgb(156, 174, 255);
+}
+
+.header_contacts form input {
+  width: 150px;
+  padding: 10px;
+  border: 0;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.header_contacts form button {
+  padding: 10px;
+  border: 0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: rgb(243, 243, 243);
+}
+
+.header_contacts form button:hover {
+  background-color: rgb(195, 206, 255);
+  transition: 0.3s;
+}
+
+.header ul ul {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  left: 0px;
+  width: 100%;
+  padding: 10px 0;
+  margin: 10px auto;
+  position: absolute;
+  align-items: center;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.drop-down_menu li {
+  color: black;
+  text-decoration: none;
+  display: block;
+  width: 30%;
+  padding: 10px;
+  margin: 0 0 0;
+  text-align: center;
+}
+
+.drop-down_menu li:hover {
+  background-color: #ddd;
+}
+
+.header_list_nav li:hover .drop-down_menu {
+  display: flex;
+}
+
+.header_list_nav li:hover {
+  background-color: rgb(195, 206, 255);
+}
+
+#promo {
+  margin: 0px auto;
+  margin-bottom: 0;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.promo_flowers {
+  padding: 40px 0;
+  width: 20%;
+  border-radius: 20px;
+  margin: auto;
+  color: rgb(49, 49, 49);
+  text-transform: uppercase;
+  font-weight: 500;
+  background-image: url(../images/1.jpg);
+  background-size: cover;
+  box-shadow: 0 2px 2px rgb(156, 174, 255);
+}
+
+.promo_flowers p {
+  padding: 0;
+  text-align: center;
+  font-size: 24px;
+  margin: 0 auto;
+}
+
+.promo_flowers:hover {
+  transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transition: 0.3s;
+}
+
+main {
+  position: relative;
+  /* margin-top: 80px; */
+  padding-top: 50px;
+  padding-bottom: 40px;
+  text-align: center;
+  /* background: white; */
+  width: 90%;
+  margin: auto;
+}
+
+.main_catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px 40px;
+}
+
+.main_catalog .product {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  justify-content: center;
+  /* padding: 10px; */
+  margin: 10px;
+  border: 3px solid rgb(255, 255, 255);
+  background-color: #fff;
+}
+
+.main_catalog .product:hover {
+  box-shadow: 0 0 20px rgb(175, 175, 175);
+  transition: 0.5s;
+}
+
+.main_catalog .product img {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
+
+.main_catalog .product .product_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.main_catalog .product .product_info p {
+  margin: 10px;
+}
+
+.main_catalog .product .wish_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main_catalog .product .wish_list a:first-child button {
+  padding: 10px;
+  background-color: rgb(0, 163, 0);
+  margin: 10px;
+  border: 0;
+  border-radius: 15px;
+  text-transform: uppercase;
+  box-shadow: 0 1px 1px rgb(187, 187, 187) inset;
+}
+
+.main_catalog .product .wish_list a:first-child button:hover {
+  background-color:rgb(0, 218, 0);
+  transition: 0.3s;
+}
+
+.main_catalog .product .wish_list a:last-child button {
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+  border: 0;
+  background-color: #fff;
+  background-image: url(../images/like-heart-outline-symbol_icon-icons.com_73226.png);
+  background-size: cover;
+}
+
+.main_catalog .product .wish_list a:last-child button:hover {
+  background-image: url(../images/heart-icon.png);
+  transition: 0.3s;
+}
+
+.main_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+}
+
+.main_links .link{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.main_links .link img {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  padding: 10px;
+}
+
+.main_links .link p {
+  margin: 10px auto;
+}
+
+main .main_links + a p{
+  margin: 20px auto;
+  padding: 20px;
+  width: 200px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: rgb(219, 177, 255);
+  border-radius: 20px;
+}
+
+main .main_links + a p:hover {
+  background-color: rgb(184, 103, 255);
+  box-shadow: 0 0 10px rgb(184, 103, 255);
+  color: white;
+  transition: 0.3s;
+}
+
+#information {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.banner {
+  background-image: url(../images/eustoma-tsvety-buket-fon.jpg);
+  background-size: cover;
+  padding: 50px;
+  height: 500px;
+}
+
+#information h1 {
+  text-align: right;
+  padding: 20px;
+  right: 40px;
+  margin: 0px auto;
+  color:rgb(207, 0, 197);
+}
+
+#information p {
+  padding: 10px 20px ;
+  width: 50%;
+  right: 40px;
+  float: right;
+  font-size: 24px;
+  line-height: 34px;
+  text-align: right;
+  color:rgb(99, 0, 94) ;
+  text-shadow: white 1px 1px 1px;
+}
+
+#information p::before, #information p::after {
+  content: "";
+  height: 4px;
+  width: 100%;
+  right: 0;
+  background-color:rgb(207, 0, 197);
+  display: block;
+  margin: 30px 0;
+}
+
+
+h1 {
+  margin: 30px auto;
+  text-align: center;
+  font-size: 34px;
+  text-transform: uppercase;
+  line-height: 40px;
+}
+
+#About_company {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+#About_company .About_company_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45%;
+  margin: auto;
+}
+
+#About_company .About_company_block h1 {
+  margin-bottom: 0px;
+}
+
+#About_company .About_company_block h1 + p {
+  margin: 20px auto;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: justify;
+}
+
+
+#About_company .About_company_block a {
+  position: relative;
+  background-size: cover;
+  height: 600px;
+  width: 100%;
+}
+
+#About_company .About_company_block:nth-child(1)  a{
+  background-image: url(../images/1351846131.jpg);
+}
+
+#About_company .About_company_block:nth-child(2)  a{
+  background-image: url(../images/ECen5cNUwAARaeH.jpg);
+}
+
+#About_company .About_company_block:nth-child(3) a {
+  background-image: url(../images/i9_LmAHXVVI.jpg);
+}
+
+#About_company .About_company_block:nth-child(4) a {
+  background-image: url(../images/bfdac7ee4e126cd746a3788541074f5f.jpg);
+}
+
+
+#About_company .About_company_block a p {
+  position: absolute;
+  display: block;
+  bottom: 50px;
+  left: 30%;
+  text-align: center;
+  font-size: 30px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.671);
+}
+
+
+
+
+
+.content_text {
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+footer {
+  background-color: rgb(188, 111, 255);
+  width: 100%;
+  /* padding: 20px; */
+  padding: 20px 0;
+}
+
+.footer_content {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  flex-direction: row;
+  margin: 20px auto;
+  flex-wrap: wrap;
+}
+
+.footer_menu {
+  display: flex;
+  flex-direction: column;
+  width: 23%;
+  text-align: center;
+}
+
+.footer_menu a , .footer_menu p {
+  margin: 10px;
+}
+
+hr {
+  width: 90%;
+}
+
+.footer_content + hr + .footer_menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  flex-wrap: wrap;
+  margin: auto;
+}
